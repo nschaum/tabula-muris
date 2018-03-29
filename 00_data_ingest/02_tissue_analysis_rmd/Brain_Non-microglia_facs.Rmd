@@ -461,8 +461,7 @@ If some of the clusters you find in the subset deserve additional cell_ontology_
 ```{r}
 subcluster.ids <- c(0, 1, 2, 3,4,5)
 subfree_annotation <- c()
-cell_ontology_class <-c("astrocyte of the cerebral cortex","astrocyte of the cerebral cortex","astrocyte of the cerebral cortex",
-                   "astrocyte of the cerebral cortex","Bergmann glial cell","oligodendrocyte")
+cell_ontology_class <-c("astrocyte","astrocyte","astrocyte","astrocyte","Bergmann glial cell","oligodendrocyte")
 subtiss@meta.data[,'free_annotation'] <- NA
 tiss@meta.data[,'cell_ontology_class'] <- plyr::mapvalues(x = subtiss@ident, from = subcluster.ids, to = subcell_ontology_class)
 
